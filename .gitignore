@@ -1,0 +1,11 @@
+# 模型和数据
+*.pth
+*.pt
+*.h5
+*.onnx
+*.pb
+*.zip
+*.tar.gz
+dataset/
+dinov3_models/
+results/
