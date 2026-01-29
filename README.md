@@ -64,20 +64,14 @@ pip install -r requirements.txt
 将您下载的 `dinov3-vitb16-pretrain-lvd1689m` 放到项目目录：
 
 ```bash
-mkdir -p checkpoint/dinov3-vitb16-pretrain-lvd1689m
+mkdir -p dinov3_models/vitb16
 # 将下载的模型文件复制到这个目录
 # 应该包含: config.json, model.safetensors, preprocessor_config.json等
 ```
 
-### Step 3: 验证DINOv3
+### Step 3: 准备数据集
 
-```bash
-python verify_dinov3.py --model_path checkpoint/dinov3-vitb16-pretrain-lvd1689m
-```
-
-看到全部 ✓ 就成功了！
-
-### Step 4: 准备数据集
+将数据集放在根目录下  
 
 ```bash
 dataset/
@@ -91,13 +85,13 @@ dataset/
     └── NC4K/
 ```
 
-### Step 5: 开始训练
+### Step 4: 开始训练
 
 ```bash
 bash train_e2net.sh
 ```
 
-### Step 6: 测试与评估
+### Step 5: 测试与评估
 
 ```bash
 # 测试
